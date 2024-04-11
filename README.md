@@ -5,7 +5,7 @@ The UploadFileService is a .NET class designed to facilitate file uploads within
 It's specifically crafted to handle file uploads securely and efficiently.
 With methods for synchronous and asynchronous file uploads, it offers flexibility to suit various application requirements.
 The service validates crucial parameters such as file size, extension, and directory existence to ensure data integrity and security.
-Whether uploading files as byte arrays or using FileStream, it provides a streamlined solution for integrating file upload functionality into .NET applications.
+Whether uploading files as byte arrays or using IFormFile, it provides a streamlined solution for integrating file upload functionality into .NET applications.
 Furthermore, robust error handling capabilities enable graceful management of upload failures, enhancing overall application reliability.
 
 ## 1) UploadFile:
@@ -66,9 +66,9 @@ Example:
 
             using (var memoryStream = new MemoryStream())
             {
-                using (var fileStream = file.OpenReadStream())
+                using (var IFormFile = file.OpenReadStream())
                 {
-                    fileStream.CopyTo(memoryStream);
+                    IFormFile.CopyTo(memoryStream);
                 }
 
                 byte[] fileBytes = memoryStream.ToArray();
@@ -93,9 +93,9 @@ Example:
 
             using (var memoryStream = new MemoryStream())
             {
-                using (var fileStream = file.OpenReadStream())
+                using (var IFormFile = file.OpenReadStream())
                 {
-                    fileStream.CopyTo(memoryStream);
+                    IFormFile.CopyTo(memoryStream);
                 }
 
                 byte[] fileBytes = memoryStream.ToArray();
