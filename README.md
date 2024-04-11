@@ -28,14 +28,14 @@ Furthermore, robust error handling capabilities enable graceful management of up
 	allowedSize: The maximum allowed size for the file.
 	fileContent: The content of the file as a byte array.
 
-## 3) UploadFile (alternate version with FileStream parameter):
+## 3) UploadFile (alternate version with IFormFile parameter):
 	path: The base path where the file will be uploaded.
 	directory: The directory within the base path where the file will be uploaded.
 	fileName: The File stream representing the file.
 	allowedExtensions: A list of allowed file extensions.
 	allowedSize: The maximum allowed size for the file.
 
-## 4) UploadFileAsync (alternate version with FileStream parameter):
+## 4) UploadFileAsync (alternate version with IFormFile parameter):
 	path: The base path where the file will be uploaded.
 	directory: The directory within the base path where the file will be uploaded.
 	fileName: The File stream representing the file.
@@ -114,7 +114,7 @@ Example:
         }
 
         
-3) UploadFile (alternate version with FileStream parameter):
+3) UploadFile (alternate version with IFormFile parameter):
     public IActionResult IndexNew(IFormFile file)
         {
             List<string> extension = new List<string>();
@@ -132,7 +132,7 @@ Example:
             }
         }
 
-4) UploadFileAsync (alternate version with FileStream parameter):
+4) UploadFileAsync (alternate version with IFormFile parameter):
     public async Task<IActionResult> IndexNewAsync(IFormFile file)
         {
             List<string> extension = new List<string>();
