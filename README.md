@@ -8,7 +8,7 @@ The service validates crucial parameters such as file size, extension, and direc
 Whether uploading files as byte arrays or using IFormFile, it provides a streamlined solution for integrating file upload functionality into .NET applications.
 Furthermore, robust error handling capabilities enable graceful management of upload failures, enhancing overall application reliability.
 
-## 1) UploadFile:
+### 1) UploadFile:
 	path: The base path where the file will be uploaded.
 	directory: The directory within the base path where the file will be uploaded.
 	fileName: The name of the file.
@@ -18,7 +18,7 @@ Furthermore, robust error handling capabilities enable graceful management of up
 	allowedSize: The maximum allowed size for the file.
 	fileContent: The content of the file as a byte array.
 
-## 2) UploadFileAsync:
+### 2) UploadFileAsync:
 	path: The base path where the file will be uploaded.
 	directory: The directory within the base path where the file will be uploaded.
 	fileName: The name of the file.
@@ -28,14 +28,14 @@ Furthermore, robust error handling capabilities enable graceful management of up
 	allowedSize: The maximum allowed size for the file.
 	fileContent: The content of the file as a byte array.
 
-## 3) UploadFile (alternate version with IFormFile parameter):
+### 3) UploadFile (alternate version with IFormFile parameter):
 	path: The base path where the file will be uploaded.
 	directory: The directory within the base path where the file will be uploaded.
 	fileName: The File stream representing the file.
 	allowedExtensions: A list of allowed file extensions.
 	allowedSize: The maximum allowed size for the file.
 
-## 4) UploadFileAsync (alternate version with IFormFile parameter):
+### 4) UploadFileAsync (alternate version with IFormFile parameter):
 	path: The base path where the file will be uploaded.
 	directory: The directory within the base path where the file will be uploaded.
 	fileName: The File stream representing the file.
@@ -44,7 +44,7 @@ Furthermore, robust error handling capabilities enable graceful management of up
 
 
 
-### --------------------------------------------------Error and Success Codes--------------------------------------------------
+## Error and Success Codes
 Success (0): The file was uploaded successfully.
 SizeLessThanZero (1): The size of the file is less than zero.
 SizeMoreThanSuggested (2): The size of the file is more than the suggested maximum size.
