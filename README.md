@@ -1,5 +1,5 @@
-### ----------------------------------------------------Upload File Service---------------------------------------------------
-### -------------------------------------------------Author: Pranavkant Nigam----------------------------------------------
+# Upload File Service
+## Author: Pranavkant Nigam
 
 The UploadFileService is a .NET class designed to facilitate file uploads within .NET applications.
 It's specifically crafted to handle file uploads securely and efficiently.
@@ -59,7 +59,8 @@ Others (8): Represents other unspecified errors.
 Example: 
 
 1) UploadFile:
-	public IActionResult Index(IFormFile file)
+```bash
+public IActionResult Index(IFormFile file)
         {
             List<string> extension = new List<string>();
             extension.Add(".pdf");
@@ -84,9 +85,11 @@ Example:
                 }
             }    
         }
+```
 
 2) UploadFileAsync:
-	public async Task<IActionResult> Index(IFormFile file)
+```bash
+public async Task<IActionResult> Index(IFormFile file)
         {
             List<string> extension = new List<string>();
             extension.Add(".pdf");
@@ -112,10 +115,11 @@ Example:
                 }
             }
         }
-
+```
         
 3) UploadFile (alternate version with IFormFile parameter):
-    public IActionResult IndexNew(IFormFile file)
+```bash
+public IActionResult IndexNew(IFormFile file)
         {
             List<string> extension = new List<string>();
             extension.Add(".pdf");
@@ -131,9 +135,11 @@ Example:
                 return BadRequest("Error: " + result);
             }
         }
+```
 
-4) UploadFileAsync (alternate version with IFormFile parameter):
-    public async Task<IActionResult> IndexNewAsync(IFormFile file)
+5) UploadFileAsync (alternate version with IFormFile parameter):
+   ```bash
+   public async Task<IActionResult> IndexNewAsync(IFormFile file)
         {
             List<string> extension = new List<string>();
             extension.Add(".pdf");
@@ -150,3 +156,4 @@ Example:
 
             }
         }
+   ```
